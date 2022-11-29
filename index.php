@@ -1,15 +1,7 @@
 <?php
-/* 
-Milestone 1
-Creare un form che invii in GET la lunghezza della password. 
-Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) 
-da restituire all’utente. Scriviamo tutto (logica e layout) in un unico file index.php
-
-Milestone 2
-Verificato il corretto funzionamento del nostro codice, 
-spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
-*/
 include __DIR__ . '/functions/passGen.php';
+
+
 ?>
 
 <!doctype html>
@@ -48,7 +40,7 @@ include __DIR__ . '/functions/passGen.php';
                         <div class="col">
                             <div class="text">
                                 <p>Lunghezza password:</p>
-                                <p>Consenti ripetizioni di uno o più caratteri:</p>
+                                <p class="py-4 m-0">Consenti ripetizioni di uno o più caratteri:</p>
                             </div>
                             <div class="buttons">
                                 <button type="submit" class="btn btn-primary">Genera</button>
@@ -56,7 +48,19 @@ include __DIR__ . '/functions/passGen.php';
                             </div>
                         </div>
                         <div class="col">
-                            <input type="number" name="length" id="length">
+                            <div>
+                                <input type="number" class="form-control" name="length" id="length" aria-describedby="helpId">
+                            </div>
+                            <div class="chars_repeat">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">No</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

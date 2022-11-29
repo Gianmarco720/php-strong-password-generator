@@ -1,10 +1,13 @@
 <?php
 function pass_gen()
 {
-    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?';
+    $symbols = '!@#$%^&*()_-=+;:,.?';
+    $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $nums = '1234567890';
+    $allchars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?';
     $password = '';
     for ($i = 0; $i < $_GET['length']; $i++) {
-        $password .= $chars[rand(0, strlen($chars) - 1)];
+        $password .= $allchars[rand(0, strlen($allchars) - 1)];
     }
     return $password;
 }
