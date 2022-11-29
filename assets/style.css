@@ -5,3 +5,23 @@ body {
 .grey_text {
     color: #7f8996;
 }
+
+.alert {
+    width: 80%;
+    margin: auto;
+}
+
+.generator {
+    background-color: #F8F9FA;
+    width: 80%;
+    margin: auto;
+    padding: 5% 5%;
+}
+
+.generator p {
+    font-size: 20px;
+}
+
+.buttons {
+    padding-top: 25%;
+}
