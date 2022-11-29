@@ -4,18 +4,12 @@ Milestone 1
 Creare un form che invii in GET la lunghezza della password. 
 Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) 
 da restituire all’utente. Scriviamo tutto (logica e layout) in un unico file index.php
-*/
-function pass_gen()
-{
-    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?';
-    $password = '';
-    for ($i = 0; $i < $_GET['length']; $i++) {
-        $password .= $chars[rand(0, strlen($chars) - 1)];
-    }
-    return $password;
-}
 
-pass_gen();
+Milestone 2
+Verificato il corretto funzionamento del nostro codice, 
+spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
+*/
+include __DIR__ . '/functions/passGen.php';
 ?>
 
 <!doctype html>
